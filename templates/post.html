@@ -1,0 +1,34 @@
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#pa{$tweets.tweets_sn}">回覆</button>
+		
+		
+		<div class="modal fade" id="pa{$tweets.tweets_sn}" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+			  <h3 class="modal-title">{$tweets.tweets_title}</h3>
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+            </div>
+            <div class="modal-body">
+			<p class="text-left ">{$tweets.tweets_content}</p>
+			<iframe  src="http://120.125.80.111/travelguideV2/index.php?tweets_sn={$tweets.tweets_sn}" width="250px" height="300px" frameborder="0" scrolling="no"></iframe>
+      
+			</div>
+
+		<form action="tweets.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">  
+			<div class="form-group">
+				<div class="col-md-10">
+					<textarea class="form-control" name="posts_content" id="posts_content" placeholder="請輸入回覆內容"></textarea>
+				</div>
+			</div>			
+			<div class="form-group">
+				<div class="col-md-offset-2 col-md-10">
+					<input type="hidden" name="op" value="insert_posts">
+					<input type="hidden" name="user_id" value="{$login_user.user_name}">
+					<input type="hidden" name="tweets_sn" value="{$tweets.tweets_sn}">
+					<button type="submit" class="btn btn-primary">回覆</button>
+				</div>
+			</div>
+		</form>
+          </div>
+        </div>
+      </div>

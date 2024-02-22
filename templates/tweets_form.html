@@ -1,0 +1,48 @@
+<div class="pt-8">
+	<h1>發布推文</h1>
+</div>
+<script src="class/ckeditor/ckeditor.js"></script>
+<form action="tweets.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+    <div class="form-group">
+        <label class="col-md-2 control-label">{$goods.goods_title}</label>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">推文標題：</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="tweets_title" id="tweets_title" placeholder="請輸入推文標題" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">相片解說：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" name="tweets_content" id="tweets_content" placeholder="請輸入相片內容">{$tweets.tweets_content}</textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-md-2 control-label">景點圖片：</label>
+        <div class="col-md-10">
+            <input type="file" name="tweets_pic" id="tweets_pic">
+            {if isset($tweets.pic)}
+                <img src="{$tweets.pic}" alt="{$tweets.goods_sn}">
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            {if isset($tweets.tweets_sn) and $tweets.tweets_sn > 0}
+                <input type="hidden" name="op" value="update_tweets">
+                <input type="hidden" name="tweets_sn" value="{$tweets.tweets_sn}">
+            {else}
+                <input type="hidden" name="op" value="insert_tweets">
+                <input type="hidden" name="goods_sn" value="{$goods.goods_sn}">
+                <input type="hidden" name="user_id" value="{$user.user_id}">
+            {/if}
+            <button type="submit" class="btn btn-primary">送出推文</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    CKEDITOR.replace( 'tweets_content' );
+</script>

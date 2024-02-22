@@ -1,0 +1,11 @@
+<a href="user.php?op=user_display&user_sn={$login_user.user_sn}" class="btn btn-block btn-info">我的帳號</a>
+{if $isUser}
+    <a href="user.php?op=collects_list&user_sn={$login_user.user_sn}" class="btn btn-block btn-warning">我的收藏</a>
+{/if}
+{if $isAdmin}
+    <a href="tool.php?op=goods_form" class="btn btn-block btn-success">發布景點</a>
+{/if}
+<a href="user.php?op=user_logout" class="btn btn-block btn-danger">登出</a>
+<div class="alert alert-success">
+  {$login_user.user_name}您好！歡迎光臨{$page_name}
+</div>

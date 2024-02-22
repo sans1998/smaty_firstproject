@@ -1,0 +1,97 @@
+﻿<!--巡覽列-->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-lg bg-wa  fixed-top">
+		<a class="navbar-brand" href="index.php">
+			<img class="" src="templates/images/NavLOGO.png" style="width:80px;" />
+		</a>
+
+		
+		<button2 class="navbar-toggler"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+			<img class="" src="templates/icon/bar.jpg" style="width:50px;"><span></span>
+		</button2>
+    <div class="collapse navbar-collapse"
+         id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto justify-content-end">
+            <li class="nav-item scrollTop">
+                <a class="nav-link text-black" href="index.php">
+                    首頁
+                </a>
+            </li>
+			
+			<li class="nav-item">
+						<a class="nav-link text-black scrollTop "  href="index.php#swContent">
+						<i class="fa fa-map-marker"></i>
+						景點推薦
+						</a>
+			</li>
+			<li class="nav-item dropdown">
+                <a class="nav-link text-black" data-toggle="modal" data-target="#myModal02">
+				<i class="fa fa-user"></i>
+					<span class="glyphicon glyphicon-user"></span>
+                    會員專區
+                </a>
+            </li>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link text-black dropdown-toggle scrollTop" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-comment"></span>
+				推文版
+				</a>
+				<div class="dropdown-menu">
+					{if $isUser}<a class="dropdown-item" href="user.php?op=tweets_list&user_sn={$login_user.user_sn}">個人推文</a>{/if}
+					<a class="dropdown-item" href="index.php?op=tweets_list">回憶推文版</a>
+				</div>
+			</li>
+            <li class="nav-item dropdown">
+                <a class="nav-link text-black dropdown-toggle scrollTop" data-toggle="dropdown" href="#">景點內容</a>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="index.php?te=666">熱門景點</a>
+					<a class="dropdown-item" id="clickx" href="index.php?op=stroke">旅遊卡</a>
+					<!--{if $isUser}<a class="dropdown-item" href="user.php?op=user_pic">旅遊相簿</a>{/if}-->
+				</div>
+            </li>    
+			<li class="nav-item dropdown">
+				<a class="nav-link text-black dropdown-toggle scrollTop" data-toggle="dropdown" href=""><span class="glyphicon glyphicon-comment"></span>
+				景點縣市
+				</a>
+				<div class="dropdown-menu">
+					<a href="index.php?co=台北市"><input name="keyword" type="button" value="台北市" class="dropdown-item"></a>
+					<a href="index.php?co=新北市"><input name="keyword" type="button" value="新北市" class="dropdown-item"></a>
+					<a href="index.php?co=桃園市"><input name="keyword" type="button" value="桃園市" class="dropdown-item"></a>
+					<a href="index.php?co=基隆市"><input name="keyword" type="button" value="基隆市" class="dropdown-item"></a>
+					<a href="index.php?co=宜蘭縣"><input name="keyword" type="button" value="宜蘭縣" class="dropdown-item"></a>
+				</div>
+			</li>
+			
+			<li class="nav-item dropdown">
+				
+				<a class="nav-link text-black dropdown-toggle scrollTop" data-toggle="dropdown" href="index.php#swOther">
+                    其他資訊
+                </a>
+				<div class="dropdown-menu">
+					<a class="nav-link text-black  scrollTop" data-toggle="" href="index.php?op=email"><span class=""></span>
+					意見回饋
+					</a>
+				</div>
+            </li>
+        </ul>
+		<ul class="form-inline ml-auto">
+
+			<a href="https://www.instagram.com/travelguide234/"><lix><i class="fa fa-instagram text-black"></i></lix></a>
+			<a href="https://www.facebook.com/groups/798589863893500/"><lix><i class="fa fa-facebook-square text-black"></i></lix></a>
+			<a href="https://www.instagram.com/t.ing_/"><lix><i class="fa fa-twitter-square text-black"></i></i></lix></a>
+			<a href="https://www.instagram.com/t.ing_/"><lix><i class="fa fa-address-card text-black"></i></lix></a>
+		<form class="form-inline ml-auto" action="index.php" method="get" role="form">
+			<div class="input-group-prepend">
+				<input name="keyword" type="text" class="form-control" placeholder="請輸入關鍵字">
+				<span class="input-group-btn">
+					<button type="submit" class="btn btn-outline-secondary mx-2" >搜尋</button>
+				</span>
+			</div>
+		</form>
+		</ul>
+	</div>
+</nav>

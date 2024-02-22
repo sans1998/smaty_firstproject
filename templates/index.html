@@ -1,0 +1,313 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>   
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{$page_name}</title>
+	
+    <link href="templates/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="templates/css/style.css" rel="stylesheet" charset="utf-8" >
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="templates/js/jquery-3.3.1.min.js"></script>
+	<script src="templates/js/jquery-migrate-3.1.0.min.js"></script>
+	<script src="templates/js/jquery-migrate-3.1.2.min.js"></script>
+    <script src="templates/js/popper.min.js"></script>
+    <script src="templates/js/bootstrap.min.js"></script>
+	 <link rel="stylesheet" href="form.css" >
+	<!--<link href="templates/css/style.css" rel="stylesheet" />
+	<link rel="stylesheet" href="templates/css/bootstrap.min.css">
+	    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.min.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+	<!--<script src="templates/js/jquery-3.3.1.min.js"></script>
+    <script src="templates/js/popper.min.js"></script>
+    <script src="templates/js/bootstrap.min.js"></script>
+	<script src="templates/js/script.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">    
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+    <style>
+        .carousel-caption {
+            text-shadow: 2px 2px 3px #353866;
+            color: floralwhite;
+        }
+
+        div {
+            font-family: 微軟正黑體;
+        }
+		
+.aniass{
+	opacity: 0;
+	transition: all 1.5s;
+	transform:translateY(50px);
+}
+
+.fadass{
+	opacity: 1;
+	transform:translateY(0);
+}
+
+.aniass2{
+	opacity: 0;
+	transition: all 3.5s;
+	transform:translateX(-150px);
+}
+
+.fadass2{
+	opacity: 1;
+	transform:translateX(0);
+}
+
+.wrap{
+
+	overflow: hidden;
+    background-image:url(templates/images/BG.png);
+	max-width:100%;
+	background-position: bottom center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.pt-8,
+.py-8 {
+	padding-top: 9rem !important;
+}
+
+@media (max-width: 779px) {
+	.iba
+	{
+			display : block;
+	}
+	iframe{
+	display:none;
+	}
+	ifram{
+		max-width:100%;
+	}
+}
+@media (max-width: 779px) {
+	iframe{
+	display:none;
+	}
+
+}
+
+.iba{
+	iframe{
+		display:block;
+	}
+}
+.dropdown-menu li:hover .sub-menu {
+	visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+		display: block;
+}
+
+.container2{
+	max-width:100%;
+}
+
+.gogo2{
+	cursor:pointer;
+	border:none;
+	color:#FFF;
+    background:#000000;
+	border-radius:5px;
+	width:200px;
+	height:70px;
+}
+
+
+    </style>
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="tooltip"]').tooltip();
+		});
+	$(document).ready(function(){
+		var showSkill = false;
+		$(window).scroll(function(){
+			var scrollPos = $(window).scrollTop();
+			var windowHeight = $(window).height();
+			console.log(scrollPos, windowHeight);
+		
+		$('.aniass').each(function(){
+			 var thisPos = $(this).offset().top;
+				if((windowHeight + scrollPos) >= thisPos) {
+				$(this).addClass('fadass');
+			}
+		});
+		
+		$('.aniass2').each(function(){
+			var thisPos = $(this).offset().top;
+				if((windowHeight + scrollPos) >= thisPos) {
+				$(this).addClass('fadass2');
+			}
+		})
+	});
+  });
+  
+  
+  $(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: $form.serialize(),
+                success: after_form_submitted,
+                dataType: 'json'
+            });
+
+      });
+});
+	</script>
+  </head>
+  <body>		
+  {if $op=="posts_list"}
+		{include file="posts_list.html"}
+		{else}
+  <div class="wrap">
+    <header>
+        {include file="menu.html"}
+	<div class="container">
+	<div id="shop_head">
+		{if $op}
+		{else}
+		{include file="activity.html"}
+		{/if}
+      </div>
+      <div id="shop_main" class="row">
+	  <div class="container mt-3">
+	     {if isset($msg)}
+		 </div>
+		 
+        
+		<div class="container mt-3 pt-10">
+            <div class="alert alert-danger">{$msg}</div>
+          {/if}
+          {if $op=="goods_form"}
+            {include file="goods_form.html"}
+          {elseif $op=="email"}
+            {include file='email.html'}
+          {elseif $op=="goods_display"}
+            {include file='goods_display.html'}
+          {elseif $op=="user_form"}
+            {include file='user_form.html'}
+          {elseif $op=="display_user"}
+            {include file='display_user.html'}
+          {elseif $op=="collects_list"}
+            {include file='goods_list.html'}
+            {include file='tweets_list.html'}
+          {elseif $op=="tweets_form"}
+            {include file='tweets_form.html'}
+          {elseif $op=="goods_list"}
+            {include file='goods_list.html'}
+          {elseif $op=="tweets_list"}
+            {include file='tweets_list.html'}
+		  {elseif $op=="list"}
+            {include file='goods_list.html'}
+		  {elseif $op=="listt"}
+            {include file='goods_list.html'}
+		  {elseif $op=="te"}
+            {include file='goods_list.html'}
+		  {elseif $op=="stroke"}
+            {include file='stroke.html'}
+		  {elseif $op=="user_pic"}
+            {include file='tweets_list.html'}
+          {else}
+            {include file='kan.html'}
+          {/if}
+		 
+        </div>
+      </div>
+
+      <div id="shop_foot" style="background-color:#353866; padding:0.6em;" class="col-12">
+        <h6 class="col-12 my-3 text-center" style="color:#CEC8D1;">
+		<div>地址：桃園市龜山區德明路5號</div>
+        <div>電話：(02)2882-4564</div>
+        <div>版權所有 Copyright © 2019 旅遊導覽
+            The traveling books.All rights reserved.</div>
+		</h6>
+      </div>
+
+	<div class="modal fade" id="myModal02">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">會員登入</h6>
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <p>{include file='index_side.html'} </p>
+                            <img class="img-fluid" src="templates/images/ce-travel.jpg" />
+                            <p>想要現在馬上出去旅遊嗎!來KTravelguide就對了!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-light text-dark border-dark" data-dismiss="modal">關閉視窗</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>{/if}
+  </body>
+</html>

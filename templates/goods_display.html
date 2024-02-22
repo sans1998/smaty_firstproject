@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-6 pt-10">
+    <img src="{$goods.pic}" alt="{$goods.goods_title}" class="img-thumbnail">
+  </div>
+  <div class="col-md-6 pt-10">
+    <h2>{$goods.goods_title}</h2>
+    <p>人氣：{$goods.goods_counter}</p>
+    <div>
+	  {if $isUser}
+		{if $clt=="true"}
+		<a href="tweets.php?op=delete_collects&user_sn={$login_user.user_sn}&goods_sn={$goods.goods_sn}" class="btn btn-danger" role="button" >取消收藏</a>
+		{else}
+		<a href="tweets.php?op=add_to_collects&user_sn={$login_user.user_sn}&goods_sn={$goods.goods_sn}&goods_title={$goods.goods_title}" class="btn btn-primary" role="button">加入收藏</a>
+		{/if}
+		<a href="tweets.php?op=tweets_form&goods_sn={$goods.goods_sn}&goods_title={$goods.goods_title}" class="btn btn-success">發布推文</a>
+      {/if}
+	  {if $isAdmin}
+        <a href="tool.php?op=goods_form&goods_sn={$goods.goods_sn}" class="btn btn-warning">編輯景點</a>
+        <a href="tool.php?op=delete_goods&goods_sn={$goods.goods_sn}" class="btn btn-danger">刪除景點</a>
+      {/if}
+    </div>
+  </div>
+</div>
+{include file="page_guide.html"}

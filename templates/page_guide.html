@@ -1,0 +1,316 @@
+<!--分頁標籤導覽-->
+<ul class="nav nav-tabs">
+	<li class="nav-item">
+		<a class="nav-link active" data-toggle="tab"
+		href="#goods">
+		景點介紹
+		</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="tab"
+		href="#map">
+		景點地圖
+		</a>
+	</li>
+	<li class="nav-item">
+		<a class="nav-link" data-toggle="tab"
+		href="#tweets">
+		用戶推文
+		</a>
+	</li>
+</ul>
+<!--tab區塊-->
+<div class="tab-content">
+	<div id="goods" class="container tab-pane active">
+		<div class="row">
+		<hr width=100%>
+			<div class="col-md-6"
+			style="padding:30px 15px 10px; max-width:100%">
+				<p>{$goods.goods_content}</p>
+            </div>
+        </div>
+    </div>
+	<div id="map" class="container tab-pane fade iba pt-5">
+	
+	 {if $goods.goods_sn=="1"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4329.3503000118835!2d121.50627097560114!3d25.05632227616245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a916b9014eeb%3A0xdd8ae173b66e93e8!2z5aSn56i75Z-V56K86aCt!5e0!3m2!1szh-TW!2stw!4v1571905558670!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="2"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.2800253853125!2d121.507410114959!3d25.058496383960886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a915c7d73db9%3A0xb031aa4cebcf6cea!2zMTAz5Y-w5YyX5biC5aSn5ZCM5Y2A6L-q5YyW6KGX5LiA5q61!5e0!3m2!1szh-TW!2stw!4v1571905752326!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="3"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.3647708086055!2d121.50797251495891!3d25.055622883962236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9147253c4e7%3A0x696d3ec54fe173d2!2z5Y-w5YyX6Zye5rW35Z-O6ZqN5buf!5e0!3m2!1szh-TW!2stw!4v1571905787210!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="4"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6773557226493!2d121.52434881495947!3d25.078922483951352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aead5af124f3%3A0xe6670c8237a11d3f!2z5ZyT5bGx5aSn6aOv5bqX!5e0!3m2!1szh-TW!2stw!4v1571905816836!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="5"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.145124717747!2d121.5317130149591!3d25.063069883958807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a959a9ce781b%3A0xb0c2ef0be716c094!2z6KGM5aSp5a6u!5e0!3m2!1szh-TW!2stw!4v1571905847436!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="6"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3613.553607075956!2d121.55523496495945!3d25.083114733949344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z576O6bqX6I-v5pGp5aSp6Lyq!5e0!3m2!1szh-TW!2stw!4v1571905881591!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="7"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.869503024325!2d121.52262151495924!3d25.07241178395443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a951fdd9f7f9%3A0x7a40c3880c03a171!2z6Ie65YyX5biC56uL576O6KGT6aSo!5e0!3m2!1szh-TW!2stw!4v1571905912351!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="8"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3615.0975018844806!2d121.53357801495852!3d25.0307649839738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5aSn5a6J5qOu5p6X5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571905944567!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="9"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9089950420575!2d121.49771201495851!3d25.03716228397083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a8d7e7de09%3A0xf8e8335e58c41c8a!2z6b6N5bGx5a-6!5e0!3m2!1szh-TW!2stw!4v1571905970556!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>	
+	 {elseif $goods.goods_sn=="11"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9185521530358!2d121.49997611495857!3d25.036837983971086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a8d017b6dd%3A0xff3361bbadd40fe9!2z5Ymd55qu5a-u5q235Y-y6KGX5Y2A!5e0!3m2!1szh-TW!2stw!4v1571906027741!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="12"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7660047142203!2d121.50467051495865!3d25.04201388396855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a909a4acec8b%3A0x7c34275cfedcc1c5!2z6KW_6ZaA57SF5qiT!5e0!3m2!1szh-TW!2stw!4v1571906065148!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="13"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.8666600388033!2d121.4962539149584!3d25.038598783970137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a940c8f96b%3A0x6aee182d28c2fb39!2z6Ie65YyX6I-v6KW_6KGX5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571906092663!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="14"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.7095040722397!2d121.50358396495874!3d25.04393068396771!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a90918a8262b%3A0xcbf4f13adf52d4f7!2zMTA45Y-w5YyX5biC6JCs6I-v5Y2A6KW_6ZaA55S6!5e0!3m2!1szh-TW!2stw!4v1571906129820!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="15"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.003246257683!2d121.56228351744384!3d25.033963899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5L-h576p6Lev5LqU5q61N-iZnw!5e0!3m2!1szh-TW!2stw!4v1571906165996!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="16"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.824461287836!2d121.5580565149586!3d25.04003058396952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9eec87122c3%3A0xbe4641f96f0e578a!2z5ZyL56uL5ZyL54i257SA5b-16aSo!5e0!3m2!1szh-TW!2stw!4v1571906190375!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="17"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12072.532641902568!2d121.56823937112519!3d25.027485466225144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abac5b58b165%3A0x6db89036490f6520!2z6LGh5bGx!5e0!3m2!1szh-TW!2stw!4v1571906231827!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="18"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.066382917765!2d121.57202641496116!3d25.16723628391011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b2648c55e835%3A0xd919763355207088!2z5pOO5aSp5bSX5aSn6I2J5Y6f!5e0!3m2!1szh-TW!2stw!4v1571906263957!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="19"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.266129314171!2d121.55874761496187!3d25.194246183897572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442adf824cfc74b%3A0x5c0be3a34fc3b079!2z6Zm95piO5bGx5ZyL5a625YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571906301291!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="20"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28885.719994664363!2d121.53347032065393!3d25.179099403907504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b21d8eb6b7ef%3A0xa72115cca66b7ff8!2z56u55a2Q5rmW!5e0!3m2!1szh-TW!2stw!4v1571906336108!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="21"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3610.7938228701887!2d121.54491921496134!3d25.17643868390582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5bCP5rK55Z2R!5e0!3m2!1szh-TW!2stw!4v1571906363672!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="22"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.259447656119!2d121.53020771495962!3d25.093077383944692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aea3c8e0979b%3A0xf954036a25a0f2de!2z6Ie65YyX5aOr5p6X5a6Y6YK4!5e0!3m2!1szh-TW!2stw!4v1571906389895!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="23"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d10073.916207621241!2d121.52424392865063!3d25.085851052250202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5aOr5p6X5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571906422677!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="24"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.568242729592!2d121.5138299581009!3d25.097240795985684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aebf5a86da1b%3A0x5f56dfe454975847!2z6Ie65YyX5biC5YWS56ul5paw5qiC5ZyS!5e0!3m2!1szh-TW!2stw!4v1571906462046!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="25"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8909.204622093715!2d121.54737391041772!3d25.100496345932793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac3acd404a7d%3A0x5d6d7018397a09c1!2z5ZyL56uL5pWF5a6u5Y2a54mp6Zmi!5e0!3m2!1szh-TW!2stw!4v1571906492676!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="26"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1806.5863835023363!2d121.51565500810092!3d25.096012395985824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aeb8cbc067e3%3A0xf4ede97e74e06013!2z5ZyL56uL6Ie654Gj56eR5a245pWZ6IKy6aSo!5e0!3m2!1szh-TW!2stw!4v1571906515268!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="27"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6123781214146!2d121.52813281495804!3d25.01328398398202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a98cb364546b%3A0x14956c373dc7bb9d!2z6Ieq5L6G5rC05ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1571906546870!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="28"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0904542787353!2d121.50646631495842!3d25.031004183973813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a94f3712507b%3A0x890e4a55e21e821!2z5Y-w5YyX5qSN54mp5ZyS!5e0!3m2!1szh-TW!2stw!4v1571906582300!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="29"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.771560824515!2d121.51279881495871!3d25.041825383968682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9751f647d29%3A0xebb7ed9beabb2c73!2z5LqM5LqM5YWr5ZKM5bmz5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571907381405!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="30"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.984152125341!2d121.51959231495852!3d25.034611883972133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a99db9a2a94d%3A0x43e9034292df69b2!2z5Lit5q2j57SA5b-15aCC!5e0!3m2!1szh-TW!2stw!4v1571907409251!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="31"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5024439351755!2d121.57533671495872!3d25.05095408396447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c0db4a583%3A0x3da21183815df6f6!2z6aWS5rKz6KGX6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571907438347!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="32"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.4987877453154!2d121.57554221495887!3d25.05107808396436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ab9c6d479ecb%3A0xe9dd0be65263781!2z5p2-5bGx5oWI56WQ5a6u!5e0!3m2!1szh-TW!2stw!4v1571907471131!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="33"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.934086369216!2d121.50969266496053!3d25.137919183923792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae4248dcbdab%3A0xe815d42f76dda317!2z5Zyw54ax6LC3!5e0!3m2!1szh-TW!2stw!4v1571907499371!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="34"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.072050884084!2d121.5579813149611!3d25.16704488391025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b26d337efb0d%3A0x6238ae9267a06836!2z5aSi5bm75rmW!5e0!3m2!1szh-TW!2stw!4v1571907522214!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="35"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.949391458215!2d121.50660481496053!3d25.137401783924027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae447f6ea795%3A0x8d302b07233d15d8!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5bGx6Lev!5e0!3m2!1szh-TW!2stw!4v1571907572523!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="36"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.5320169104357!2d121.46174511496008!3d25.117698283933223!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x140dc547f891a379%3A0x973dbe7b461c105e!2z6Zec5rih5a6u!5e0!3m2!1szh-TW!2stw!4v1571907594387!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="37"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.0520609976684!2d121.57884711495785!3d24.998346883989136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa604a32818f%3A0xaafe06fd09b4d766!2z6Ie65YyX5biC56uL5YuV54mp5ZyS!5e0!3m2!1szh-TW!2stw!4v1571907617692!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="38"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.5969527896127!2d121.58443731495738!3d24.97982398399775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aa81e8703b57%3A0x3fae2a0f2cb677cc!2z5oyH5Y2X5a6u!5e0!3m2!1szh-TW!2stw!4v1571907809213!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="39"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14466.387843157963!2d121.5778712299122!3d24.97982371195779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z6LKT56m657qc6LuK56uZ!5e0!3m2!1szh-TW!2stw!4v1571907846158!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="40"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14439.239094405206!2d121.68401133005476!3d25.209636842244603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b8a46b336b7%3A0xf52664cb75e183ea!2z5paw5YyX5biC6YeO5p-z!5e0!3m2!1szh-TW!2stw!4v1571907876106!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="41"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14442.626860402865!2d121.68200933004539!3d25.18106664245724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4c44030c6d8d%3A0xbdb826d08c0c0270!2z6JCs6YeM5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1571907906075!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="42"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.9894498768267!2d121.69045736496194!3d25.20357828389324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4c746cee90ff%3A0x9e5e664f52497422!2z5p2x5r6z5ryB5riv!5e0!3m2!1szh-TW!2stw!4v1571907935452!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="44"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d17810.313667215112!2d121.60527436597832!3d25.156009290959542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5a-M5aOr5bmz5Y-k6YGT!5e0!3m2!1szh-TW!2stw!4v1571907976843!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="45"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d28874.726822153352!2d121.62909238062548!3d25.22544211849892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5paw6YeR5bGx5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1571908020108!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="46"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5178.7758025182375!2d121.6379936048807!3d25.22186772376159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b5820125099%3A0x40885a10d12b608c!2zMjA45paw5YyX5biC6YeR5bGx5Y2A5rqr5rOJ6LevMuW3tzLomZ8!5e0!3m2!1szh-TW!2stw!4v1571908080324!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="47"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.4482072573287!2d121.63607821496223!3d25.221824483884753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4b57c2217c89%3A0xd443b8997e3afc65!2z6YeR5bGx6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571908110843!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="48"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.642048131035!2d121.46334821495805!3d25.012276283982565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a819293064ab%3A0xaeb1da3fd07e9c32!2z5paw5YyX5biC5pS_5bqcIOW4guawkeW7o-WgtCDlhZLnq6Xol53ooZPnr4A!5e0!3m2!1szh-TW!2stw!4v1571908140243!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="49"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.6760979248106!2d121.45240971495802!3d25.01111978398301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a80291b1b5f9%3A0xb891f90afecb5572!2z5p6X5pys5rqQ5ZyS6YK4!5e0!3m2!1szh-TW!2stw!4v1571908178067!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="50"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.953629015737!2d121.61254901495784!3d25.001691583987498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aac505124e55%3A0x5f1415f00949f3f5!2zMjIy5paw5YyX5biC5rex5Z2R5Y2A5rex5Z2R6KGX!5e0!3m2!1szh-TW!2stw!4v1571908203181!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="51"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.2763040410223!2d121.65861931495763!3d24.99072558399262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d551037d795db%3A0xd84df8b00775cc1!2z55-z56KH6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571908252451!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="52"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6821.249905588856!2d121.82506157440851!3d25.08726539077658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4ff632f84f3d%3A0xfb6865721a6912d0!2z54y056GQ6LKT5p2RIEhvdXRvbmcgQ2F0IFZpbGxhZ2U!5e0!3m2!1szh-TW!2stw!4v1571908413899!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="53"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.8039260903042!2d121.83714511495997!3d25.108497783937466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d453de35edbb1%3A0x95cbeb8599173122!2z56OF5Z2R5Y-j!5e0!3m2!1szh-TW!2stw!4v1571908298652!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="54"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.482215329426!2d121.82598441495959!3d25.085532983948312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5ab6a97951e7%3A0xe7f72ae50bc4c9a!2z54y056GQ56Sm5Z2R5LyR6ZaS5ZyS5Y2A44CQ5pCt56Sm6LuKL-aQl-mHkS_ng6Togokv5ZKW5ZWh5bGL44CR!5e0!3m2!1szh-TW!2stw!4v1571908466260!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="55"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.8311458645067!2d121.85576346495989!3d25.10757658393796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d451e2a77aef7%3A0xf079d1cfca8d55d5!2z6buD6YeR5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1571908494035!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="56"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.7633931348496!2d121.84299401495994!3d25.10986948393687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4517fafb9471%3A0x5f15825aa6a4a7d2!2z5Lmd5Lu96ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571908519882!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="57"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.258245020785!2d121.73663061495826!3d25.025308683976306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d512fffffffff%3A0x72b0cdebc3179a04!2z5bmz5rqq6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571908542683!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="58"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1807.2908635683843!2d121.7839833081006!3d25.048265045991435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5Y2B5YiG54CR5biD!5e0!3m2!1szh-TW!2stw!4v1571908614077!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="59"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14460.290690614824!2d121.92818567999663!3d25.03160769357377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5c5448de20db%3A0xe14da3111494b8bc!2z56aP6ZqG5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1571908656701!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="60"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3612.257767337626!2d121.91732746496037!3d25.126974783928908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z6by76aCt6KeS5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571913787796!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="61"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14462.93446721062!2d121.99346742998931!3d25.009166043742038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d6782e575fcc1%3A0x275c358f48b3a45a!2z5LiJ6LKC6KeS!5e0!3m2!1szh-TW!2stw!4v1571914067631!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="62"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.677083214459!2d121.57757751495588!3d24.90899408403097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680126f993204f%3A0x470acf564d506747!2zMjMx5paw5YyX5biC56Kn5bGx6Lev57-h57-g5rC05aOp!5e0!3m2!1szh-TW!2stw!4v1571914092320!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="63"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.29106824363!2d121.53379766495684!3d24.956209784008788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468018789e88f2d%3A0x99c5d97207d24208!2z56Kn5r2t!5e0!3m2!1szh-TW!2stw!4v1571914130023!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="64"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.873112290885!2d121.70980771495654!3d24.93639218401828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467ff0000000001%3A0xb96b4b281d4101a!2z5Z2q5p6X6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571914151320!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="65"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.545867743566!2d121.55172911495455!3d24.845199484061094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468066581153c8f%3A0x1a87ecdcfb59d763!2z6Zuy5LuZ5qiC5ZyS!5e0!3m2!1szh-TW!2stw!4v1571914175654!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="66"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.480235003163!2d121.54975721495465!3d24.847442584060136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468066fa745fad9%3A0xef2707fed49edfdc!2z54OP5L6G54CR5biD!5e0!3m2!1szh-TW!2stw!4v1571914197303!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="67"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.460020015968!2d121.44453541495682!3d24.950458784011598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34680334c95b6f75%3A0x83516447015bc39d!2z5om_5aSp56aq5a-6!5e0!3m2!1szh-TW!2stw!4v1571914224047!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="68"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.950372917191!2d121.36762951495645!3d24.933760484019448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467ff0000000001%3A0x215e406a81411534!2z5LiJ5bO96ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571914245034!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="69"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.4152194722687!2d121.34864841495687!3d24.95198388401094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681eabaecb8db3%3A0xd220ed0c568d1dde!2z6bav5q2M6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571914290648!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="70"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3617.495781353774!2d121.3493431649568!3d24.94924133401206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z6bav5q2M5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1571914338376!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="71"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.5154616027603!2d121.47376571495867!3d25.050512583964633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a8f6ee1307ed%3A0x2ce2b563b5e56bc1!2z5YWI5ZeH5a6u!5e0!3m2!1szh-TW!2stw!4v1571914369033!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="72"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15304.979927330074!2d121.40286293802795!3d25.152766187089878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a50378559871%3A0x5085ef74f1da3ebe!2z5paw5YyX5biC56uL5Y2B5LiJ6KGM5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1571914426207!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="73"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28891.958337867913!2d121.40286293566255!3d25.152765609399292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a56647ab15c9%3A0x498b515368c8627c!2z5YWr6YeM5rih6Ii556K86aCt!5e0!3m2!1szh-TW!2stw!4v1571914462030!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="74"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.824704694756!2d121.43077076496124!3d25.17539618390639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a54fc0269ea9%3A0xefd8a1452482dedd!2z5reh5rC057SF5q-b5Z-O!5e0!3m2!1szh-TW!2stw!4v1571914483719!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="75"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9581537513723!2d121.43657781496117!3d25.17089078390843!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55a6909ba39%3A0xa4902f894f880bc7!2z5reh5rC06ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571914511314!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="76"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.5985154180944!2d121.4085302149615!3d25.183030883902816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a52e31154263%3A0x3241f6ac84e440a0!2z5reh5rC05ryB5Lq656K86aCt!5e0!3m2!1szh-TW!2stw!4v1571914535351!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="77"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.9258850237156!2d121.43635141496138!3d25.171980283907953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a55a6e17ddb7%3A0x7a11a0ddd8353a78!2z6Ie654Gj5Z-6552j6ZW36ICB5pWZ5pyD5reh5rC05pWZ5pyD!5e0!3m2!1szh-TW!2stw!4v1571914559160!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="78"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.3500718303667!2d121.54253061496377!3d25.292439883851934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b5d24b9341ed%3A0x28a58d2f492330b2!2z6ICB5qKF57ag55-z5qe9!5e0!3m2!1szh-TW!2stw!4v1571914582392!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="79"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5750766317174!2d121.51483551496372!3d25.284875883855435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b68c36a81c49%3A0xa760ce3e3caf572e!2z55m95rKZ54Gj5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1571914601743!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="80"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.1681063303154!2d121.53447121496389!3d25.298555483849178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442b677fce56257%3A0x44d26de46909d263!2z5a-M6LK06KeS54eI5aGU!5e0!3m2!1szh-TW!2stw!4v1571914623264!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="81"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.2240845647634!2d121.74092251496042!3d25.12811388392834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4e3e1a224eab%3A0xc7dd75bfaa9404fd!2z5aWg5r-f5a6u6ZaL5ryz6IGW546L!5e0!3m2!1szh-TW!2stw!4v1571914643064!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="82"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.218273986811!2d121.74139641496028!3d25.128310383928316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4e3e159d9663%3A0x1d84dd13f992491e!2z5Z-66ZqG5buf5Y-j5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571914666719!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="83"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.2620140110157!2d121.76165861496106!3d25.16062928391323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4ee2add3d0bf%3A0xb2a6e84801d59973!2z5ZKM5bmz5bO25YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571914693984!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="84"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7223.4736988598515!2d121.78710717495422!3d25.144586035682646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f75ae58ccbf%3A0x2407b944ab7dcdd3!2z5YWr5paX5a2Q5ryB5riv!5e0!3m2!1szh-TW!2stw!4v1571914716871!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="85"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.855580299258!2d121.79578461496068!3d25.140572983922514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f7807d7ab5d%3A0xe005c55719594f84!2z5ZyL56uL5rW35rSL56eR5oqA5Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1571914738807!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="86"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.466162921733!2d121.76927821496092!3d25.15373288391642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4f04726a5247%3A0x9f927a3986f3d6a1!2z5Z-66ZqG5biC5Y6f5L2P5rCR5paH5YyW5pyD6aSo!5e0!3m2!1szh-TW!2stw!4v1571914779311!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="87"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3610.326167496701!2d121.78347721496175!3d25.19222073389856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d48c8be2324f9%3A0xddc5edd1c087022f!2z5Z-66ZqG5ba8!5e0!3m2!1szh-TW!2stw!4v1571914800038!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="88"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14447.622609168318!2d121.7421358800316!3d25.13888039277169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4e4456aeee69%3A0xe0644dd52b7522f3!2z5Z-66ZqG5YWn5riv!5e0!3m2!1szh-TW!2stw!4v1571914820672!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="89"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3611.715341392895!2d121.74603681496082!3d25.14531293392037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5LuZ5rSe5beW!5e0!3m2!1szh-TW!2stw!4v1571914850937!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="90"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.3203446496263!2d121.70715931496089!3d25.158658983914147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d4dcc4d4409a9%3A0xa3914265c6425395!2z5aSn5q2m5bSZ56Cy5Y-w!5e0!3m2!1szh-TW!2stw!4v1571914933255!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="91"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14451.384776314273!2d121.68405723002122!3d25.107067293009177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d526b8be0f461%3A0x1a078acbc077996b!2zMjA25Z-66ZqG5biC5LiD5aC15Y2A55Gq6Zm15Z2R!5e0!3m2!1szh-TW!2stw!4v1571914961830!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="92"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.3134356615583!2d121.2384182149569!3d24.955448484009278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682215704ecc33%3A0x2adee07c063e88d1!2z5Lit5Y6f5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571915044016!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="93"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.5082966274144!2d121.24359741495392!3d24.812285184076593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683de5d9462b8b%3A0xe36ce9eba2f09ec4!2zMzM15qGD5ZyS5biC5aSn5rqq5Y2A5qGDNjPphInpgZPnn7PploDmsLTlo6k!5e0!3m2!1szh-TW!2stw!4v1571915066281!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="94"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.9219763404844!2d121.18367926495446!3d24.83234173406718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683c16aa4f5921%3A0x49aed9f2d01a2371!2z5bCP5Lq65ZyL5Li76aGM5qiC5ZyS!5e0!3m2!1szh-TW!2stw!4v1571915087391!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="95"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.5447705452884!2d121.2324662149546!3d24.845236984061046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683da78b0cffcf%3A0xe2a2cbcf1cebbd89!2z5qGD5ZyS5biC5a6i5a625paH5YyW6aSo!5e0!3m2!1szh-TW!2stw!4v1571915112495!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="96"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.1798580387454!2d121.17418311495634!3d24.925942084023088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682317a2ef0c1d%3A0x1efb7c2b76c45e07!2z5Z-U5b-D54mn5aC0!5e0!3m2!1szh-TW!2stw!4v1571915138208!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="97"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3616.5889922759643!2d121.3230191149574!3d24.98009468399765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681ee961a091ab%3A0x50aa158069cd4368!2z5Y-v5Y-j5Y-v5qiC5LiW55WM!5e0!3m2!1szh-TW!2stw!4v1571915165904!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="98"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.922478540598!2d121.3038394149578!3d25.002749983986998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681faa93c7cae1%3A0xea9285a4e0027713!2z5qGD5ZyS6KeA5YWJ5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571915194631!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="99"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.9042597675993!2d121.36381731495793!3d25.003368983986704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681dda3903c43d%3A0xeba24da1e9f0ce3b!2z5aO95bGx5beW6KeA6Z-z5a-6!5e0!3m2!1szh-TW!2stw!4v1571915216527!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="100"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.7187355203323!2d121.30906271495662!3d24.941649884015746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34681920e042adb5%3A0xf288e393fa0262bd!2z5qGD5ZyS5YWr5b635Z-k5aGY55Sf5oWL5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571915257126!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="101"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.3749609297747!2d121.28532261495528!3d24.88518858404214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468182238ecc34d%3A0x9eb6fcc6b7650372!2z5aSn5rqq6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571915285878!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="102"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11496.497666482237!2d121.25327955921625!3d24.82385839194527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34683df02d5c4f33%3A0x443f736480c92c1f!2z5rqq5rSy5bGx55m75bGx5q2l6YGT!5e0!3m2!1szh-TW!2stw!4v1571915323087!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="103"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.517848500984!2d121.40239251495119!3d24.674719184141928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34686d2938c844ad%3A0x9e6d674973e366d9!2z5aSn5ryi5qmLKOWhlOabvOa6qik!5e0!3m2!1szh-TW!2stw!4v1571915360878!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="104"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37901.117149337326!2d121.44656670957889!3d24.62583498034823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34686d7a0f783d8d%3A0x7215f1ee55141ca5!2z5Zub56ic5rqr5rOJ!5e0!3m2!1szh-TW!2stw!4v1571915397430!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="105"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28976.953018242504!2d121.36405168005851!3d24.791374031522935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468116b6c711351%3A0x9b7d218ff2581f5e!2zMzM25qGD5ZyS5biC5b6p6IiI5Y2A5bCP54OP5L6G6aKo5pmv54m55a6a5Y2A!5e0!3m2!1szh-TW!2stw!4v1571915426511!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="106"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.75358478072!2d121.34811871495458!3d24.83809918406455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346810ccacc48023%3A0xfa4c2fb1855f1701!2z5LiJ5rCR6J2Z6J2g5rSe!5e0!3m2!1szh-TW!2stw!4v1571915447269!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="107"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13288.68837260741!2d121.35348332209031!3d24.76619253912432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdac8cd840b72f7a4!2z5b2p6Jm554CR5biD!5e0!3m2!1szh-TW!2stw!4v1571915475055!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="108"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.5569286778323!2d121.24196831496016!3d25.116855483933673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34429fac00000001%3A0x353c4ce9776cf8ed!2z56u55ZyN5ryB5riv!5e0!3m2!1szh-TW!2stw!4v1571915494879!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="109"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.419839400584!2d121.29298621495884!3d25.053755483963048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a0704ec27af3%3A0xe8c23f3d34213503!2z5Y2X5bSB5LqU56aP5a6u!5e0!3m2!1szh-TW!2stw!4v1571915536231!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="113"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14470.938303887602!2d121.89263412996722!3d24.941110444253237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d58d356882083%3A0xb33246c0034ab34c!2z5aSn5rqq5ryB5riv!5e0!3m2!1szh-TW!2stw!4v1571915577983!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="114"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10609.593147554606!2d121.88436259945337!3d24.930223013284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d58c6c6cfe721%3A0xcb8d6a8e5520d605!2z6Jyc5pyI54Gj!5e0!3m2!1szh-TW!2stw!4v1571915608822!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="115"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6215.083320891668!2d121.92208741053604!3d24.98911941023509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5c3d0ecb1cc9%3A0x884caf3d03013ec1!2z6I2J5ba65Y-k6YGT!5e0!3m2!1szh-TW!2stw!4v1571915638135!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="116"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3620.408925417461!2d121.82763626495473!3d24.84987948405885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z6aCt5Z-O5rW35rC05rW05aC0!5e0!3m2!1szh-TW!2stw!4v1571915660808!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="117"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14482.437271824792!2d121.94065867993547!3d24.84303079499252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467f4f99dff7663%3A0x950a58aaa1e59ebc!2z6b6c5bGx5bO2!5e0!3m2!1szh-TW!2stw!4v1571915680704!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="118"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.8573242974826!2d121.83031941495518!3d24.868722084050013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467f772b9551861%3A0x22bf46637bc736a4!2zMjYx5a6c6Jit57ij6aCt5Z-O6Y6u6Z2S6Zuy6Lev5LiJ5q616Jit6Zm95Y2a54mp6aSo!5e0!3m2!1szh-TW!2stw!4v1571915712144!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="119"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.173099787468!2d121.82023711495476!3d24.857936884055086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467f742cbd1712d%3A0xd32442e1518a1782!2z6aCt5Z-O5paH5Ym15ZyS5Y2A!5e0!3m2!1szh-TW!2stw!4v1571915750222!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="120"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.201400067398!2d121.82196941495489!3d24.856970084055583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467f7428e5d9f65%3A0xfa016bf448ffd117!2z6aCt5Z-O6ICB6KGX!5e0!3m2!1szh-TW!2stw!4v1571915778055!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="121"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7239.8254132983175!2d121.83266812493154!3d24.866830836203487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467f712798bb8bf%3A0x43f941250a72bf3f!2z54OP55-z5ryB5riv!5e0!3m2!1szh-TW!2stw!4v1571915879918!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="122"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.017007566039!2d121.75275421495431!3d24.829091984068736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467fbb76a657fab%3A0x7f8ffdd7f51bc370!2z5LqU5bOw5peX6aKo5pmv5Y2A56KR!5e0!3m2!1szh-TW!2stw!4v1571915900366!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="123"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.6545002486787!2d121.78045921495462!3d24.841486384062918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467fa214d0af33b%3A0x4f7dc81f8fadad73!2z54y05rSe5Z2R54CR5biD!5e0!3m2!1szh-TW!2stw!4v1571915926255!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="124"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2232.2594019081416!2d121.77134267976527!3d24.82682151894432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467fbbfe704c927%3A0x910dc18e0cf3afc9!2z5rmv5ZyN5rqd5rqr5rOJ5YWs5ZyS5YWs6ZaL5rOh6IWz5rGg!5e0!3m2!1szh-TW!2stw!4v1571916148049!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="125"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3624.2130370371706!2d121.8297531580264!3d24.719565444336336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5riv5r-x5rW35YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571916193152!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="126"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4158.550610319139!2d121.76670029971211!3d24.676715299649803!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e67df5c00daf%3A0x29dd12648cd9af6b!2z576F5p2x5aSc5biC!5e0!3m2!1szh-TW!2stw!4v1571916225039!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="127"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.7083147366047!2d121.65017641495115!3d24.668166484144905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e1b56bd9e805%3A0x82942512a04a4d92!2z5LiJ5pif6Z2S6JSl5paH5YyW6aSo!5e0!3m2!1szh-TW!2stw!4v1571916248989!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="128"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.4900998850203!2d121.49185714711803!3d24.581454432023886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346873d381a9cb85%3A0x15e3fa55b2be809a!2z5qOy6Jit5qOu5p6X6YGK5qiC5Y2A6YGK5a6i5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1571916278119!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="129"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3630.645871802156!2d121.53284311494768!3d24.497723984226248!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346870b2cb8e36fd%3A0xaa76b639fb13fe15!2z5aSq5bmz5bGx5ZyL5a625qOu5p6X6YGK5qiC5Y2A!5e0!3m2!1szh-TW!2stw!4v1571916306717!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="130"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.5680137343206!2d121.81362741495109!3d24.672993484142687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467ef554a116ed3%3A0x475d5189ca48fbf7!2z5Yas5bGx5rKz6Kaq5rC05YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571916334223!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="131"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3625.201851432642!2d121.82186431495143!3d24.685586984136744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467ef431a84178d%3A0x5ab3468b86b2c5ff!2z5a6c6Jit5YKz6Jed5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1571916367997!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="132"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.595033571332!2d121.7428389149498!3d24.603168434175913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e760176d18dd%3A0xf393ac9adbae1746!2z5paw5a-u54CR5biD!5e0!3m2!1szh-TW!2stw!4v1571916403518!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="133"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11110.64261528022!2d121.861671648669!3d24.579435858222315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x498232d0f0500efd!2z5Y2X5pa55r6z56uZ!5e0!3m2!1szh-TW!2stw!4v1571916431423!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="134"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14511.377169464271!2d121.86173682985557!3d24.594569346878618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e9b86a948ec5%3A0x16bc932a38930f73!2z6JiH5r6z5riv!5e0!3m2!1szh-TW!2stw!4v1571916453613!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="135"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.766863629476!2d121.84858951494962!3d24.59724083417868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e835e0848e97%3A0x2313262636b0e482!2z6JiH5r6z5Ya35rOJ5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1571916475943!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {elseif $goods.goods_sn=="136"}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2051.1302501467276!2d121.86889592231805!3d24.575197332304977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e9d9774702d3%3A0x523ad0bd748765ef!2z5YWn5Z-k5rW354GY!5e0!3m2!1szh-TW!2stw!4v1571916504750!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	 {else}
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462782.16895110765!2d121.22617388360669!3d25.017586172496433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ac72bce20a99%3A0x3f6a35cedd0ac2e0!2z5Y-w5YyX!5e0!3m2!1szh-TW!2stw!4v1571665685068!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+     {/if}
+	<div>
+		<h2>地圖請點下方按鈕</h2>
+	</div>
+	
+		<a	href="https://www.google.com.tw/maps/search/{$goods.goods_title}" class=""  >
+			<button2 class="col-12 d-md-none" style="margin-left:75px" >				
+				<img src="templates/images/Googlemap2.png" style="width:120px; height:120px">
+			</button2>
+		</a>
+	</div>
+	<div id="tweets" class="container tab-pane fade " style="max-width:100%>
+		<div class="row">
+				<p ">{include file="tweets_list.html"}</p>
+            
+        </div>
+    </div>
+</div>
